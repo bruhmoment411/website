@@ -24,6 +24,11 @@
     document.getElementById("header").classList.toggle('light');
     document.getElementById("main").classList.toggle('light');
     document.getElementById("navbar").classList.toggle('light');
+    document.getElementById("resume").classList.toggle('light');
+    document.getElementById("facts").classList.toggle('light');
+    document.getElementById("portfolio").classList.toggle('light');
+    document.getElementById("qualities").classList.toggle('light');
+    document.getElementById("hero").classList.toggle('light');
   });
 
   /**

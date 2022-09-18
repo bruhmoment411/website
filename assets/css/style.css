@@ -10,13 +10,14 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #cacaca;
-  background: rgb(24, 24, 24);
+  color: #ffffff;
+  background: rgb(15, 15, 15);
   transition: all 0.2s;
 }
 
 body.light {
-  background: white;
+  background: rgb(255, 255, 255);
+  color: rgb(62, 81, 97)
 }
 
 a {
@@ -159,12 +160,12 @@ header {
 
 @media (min-width: 992px) {
   main {
-    background: rgb(24, 24, 24);
+    background: rgb(15, 15, 15);
     transition: all 0.2s;
   }
 
   main.light {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
   }
 }
 
@@ -443,6 +444,11 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  transition: all 0.2s;
+}
+
+#hero.light:before {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 #hero h1 {
@@ -452,6 +458,11 @@ header {
   line-height: 56px;
   color: #e7e7e7;
   /*important*/
+  transition: all 0.2s;
+}
+
+#hero.light h1 {
+  color: rgb(68, 68, 68);
 }
 
 #hero p {
@@ -459,11 +470,21 @@ header {
   margin: 15px 0 0 0;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
+  transition: all 0.2s;
+}
+
+#hero.light p {
+  color: rgb(68, 68, 68);
 }
 
 #hero p span {
   color: rgb(28, 153, 255);
   letter-spacing: 1px;
+  transition: all 0.2s;
+}
+
+#hero.light p span {
+  color: #0563bb;
 }
 
 #hero .social-links {
@@ -476,7 +497,11 @@ header {
   color: #979797;
   line-height: 1;
   margin-right: 20px;
-  transition: 0.3s;
+  transition: all 0.3s;
+}
+
+#hero.light .social-links a {
+  color: rgba(68, 68, 68, 0.6);
 }
 
 #hero .social-links a:hover {
@@ -520,7 +545,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #bbbbbb;
+  color: #818181;
 }
 
 .section-title h2::before {
@@ -593,9 +618,14 @@ section {
   width: 100%;
   position: relative;
   text-align: center;
-  background: rgb(31, 31, 31);
+  background: #242424;
   /*important*/
   border-radius: 30px;
+  transition: all 0.2s;
+}
+
+.facts.light .count-box {
+  background: #e4e4e4;
 }
 
 .facts .count-box i {
@@ -645,7 +675,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #45505b;
+  color: #818181;
 }
 
 .skills .progress .skill .val {
@@ -668,12 +698,18 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
   color: #b4b4b4;
+  transition: all 0.2s;
+}
+
+.resume.light .resume-title {
+  color: rgb(70, 70, 70);
 }
 
 .resume .resume-item {
@@ -700,6 +736,12 @@ section {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+  transition: all 0.2s;
+
+}
+
+.resume.light h5 {
+  background: #e4e4e4;
 }
 
 .resume .resume-item ul {
@@ -741,6 +783,15 @@ section {
   background: rgb(31, 31, 31);
   border-radius: 50px;
   padding: 2px 15px;
+  transition: all 0.2s;
+}
+
+.portfolio.light #portfolio-flters {
+  background: #e4e4e4;
+}
+
+.portfolio.light #portfolio-flters li {
+  color: #434f61;
 }
 
 .portfolio #portfolio-flters li {
@@ -959,6 +1010,14 @@ section {
   /*box-shadow: 0px 5px 90px 0px rgba(31, 31, 31, 0.055);*/
 }
 
+.qualities.light .icon-box {
+  background: #fafafa;
+}
+
+.qualities.light .icon-box .icon svg path {
+  fill: #e4e4e4
+}
+
 .qualities .icon-box .icon {
   margin: 0 auto;
   width: 100px;
@@ -966,13 +1025,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: ease-in-out 0.3s;
+  transition: all 0.3s;
   position: relative;
 }
 
 .qualities .icon-box .icon i {
   font-size: 36px;
-  transition: 0.5s;
   position: relative;
 }
 
@@ -983,7 +1041,6 @@ section {
 }
 
 .qualities .icon-box .icon svg path {
-  transition: 0.5s;
   fill: #f5f5f5;
 }
 
@@ -995,7 +1052,10 @@ section {
 
 .qualities .icon-box h4 a {
   color: #e4e4e4;
-  transition: ease-in-out 0.3s;
+}
+
+.qualities.light .icon-box h4 a {
+  color: rgb(70, 70, 70);
 }
 
 .qualities .icon-box p {
@@ -1011,6 +1071,7 @@ section {
 
 .qualities .iconbox-blue i {
   color: #47aeff;
+  transition: all 0.3s;
 }
 
 .qualities .iconbox-blue:hover .icon i {
@@ -1023,6 +1084,7 @@ section {
 
 .qualities .iconbox-orange i {
   color: #ffa76e;
+  transition: all 0.3s;
 }
 
 .qualities .iconbox-orange:hover .icon i {
@@ -1035,6 +1097,7 @@ section {
 
 .qualities .iconbox-pink i {
   color: #e80368;
+  transition: all 0.3s;
 }
 
 .qualities .iconbox-pink:hover .icon i {
