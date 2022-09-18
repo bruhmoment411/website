@@ -201,7 +201,7 @@ header {
   transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
-  background: #242424;
+  background-color: #242424;
   /*important*/
   height: 56px;
   width: 100%;
@@ -210,7 +210,8 @@ header {
 }
 
 .nav-menu.light a {
-  background: #d4d4d4;
+  background-color: #efefef;
+  color: #434f61;
 }
 
 .nav-menu a i,
@@ -221,7 +222,21 @@ header {
 .nav-menu a span,
 .nav-menu a:focus span {
   padding: 0 5px 0 7px;
-  color: #b3b3b3;
+  color: #b4b4b4;
+}
+
+.nav-menu.light a span,
+.nav-menu.light a:focus span {
+  padding: 0 5px 0 7px;
+  color: #434f61;
+}
+
+.nav-menu.light a:hover,
+.nav-menu.light .active,
+.nav-menu.light .active:focus,
+.nav-menu.light li:hover>a {
+  color: #fff;
+  background: #0563bb;
 }
 
 @media (min-width: 992px) {

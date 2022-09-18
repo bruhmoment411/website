@@ -19,13 +19,11 @@
     }
   }
 
-  const darkMode = document.getElementById('check');
-
   document.addEventListener('change', () => {
     document.body.classList.toggle('light');
     document.getElementById("header").classList.toggle('light');
     document.getElementById("main").classList.toggle('light');
-    //console.log(document.getElementById("nav-menu").classList.toggle('light a:focus'));
+    document.getElementById("navbar").classList.toggle('light');
   });
 
   /**
