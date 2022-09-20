@@ -222,16 +222,16 @@ header {
   transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
-  background-color: #242424;
+  background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(71, 71, 71, 0.233) 0%, rgba(119, 119, 119, 0.336) 100%);
   /*important*/
   height: 56px;
   width: 100%;
   overflow: hidden;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 .nav-menu.light a {
-  background-color: #efefef;
+  background: #efefef;
   color: #434f61;
 }
 
@@ -345,6 +345,7 @@ header {
   --txt: var(--black);
   --dark-opacity: 0;
   --light-opacity: 1;
+
 }
 
 
@@ -352,11 +353,11 @@ header {
 .toggle {
   background-color: var(--bg);
   color: var(--txt);
-  transition: background 0.3s ease;
-
+  transition: all 0.3s ease;
+  box-shadow: 0px 0 10px 2px rgba(145, 224, 255, 0.151);
   position: fixed;
-  right: 10px;
-  bottom: 10px;
+  right: 15px;
+  bottom: 20px;
   border: 0;
   background: none;
   font-size: 28px;
@@ -364,7 +365,6 @@ header {
   line-height: 0;
   cursor: pointer;
   border-radius: 50px;
-  padding: 5px;
 }
 
 .checkbox {
@@ -425,7 +425,7 @@ header {
   --txt: var(--white);
   --dark-opacity: 1;
   --light-opacity: 0;
-
+  box-shadow: 0px 0 10px 2px rgba(0, 0, 0, 0.233);
 }
 
 .toggle.active {
@@ -435,7 +435,7 @@ header {
 
 .toggle.inactive {
   transition: 0.2s;
-  bottom: 10px;
+  bottom: 13px;
 }
 
 /*--------------------------------------------------------------
@@ -633,19 +633,44 @@ section {
 # Facts
 --------------------------------------------------------------*/
 .facts .count-box {
+  transition: 0.4s;
   padding: 30px 30px 25px 30px;
   margin-top: 30px;
   width: 100%;
   position: relative;
   text-align: center;
-  background: #242424;
   /*important*/
+  z-index: 1;
   border-radius: 30px;
-  transition: all 0.2s;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(48, 48, 48, 0.304) 0%, rgba(99, 99, 99, 0.299) 100%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2.5px solid rgba(54, 54, 54, 0.288);
+}
+
+.facts .count-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(63, 63, 63, 0.304) 0%, rgba(107, 107, 107, 0.299) 100%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: -1;
+}
+
+.facts .count-box:hover::before {
+  opacity: 1;
 }
 
 .facts.light .count-box {
   background: #e4e4e4;
+  border: 0px;
 }
 
 .facts .count-box i {
@@ -959,6 +984,7 @@ section {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
+
 }
 
 .portfolio-details .portfolio-details-slider img {
@@ -976,6 +1002,7 @@ section {
   background-color: #fff;
   opacity: 1;
   border: 1px solid #0563bb;
+
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
@@ -985,6 +1012,7 @@ section {
 .portfolio-details .portfolio-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(69, 80, 91, 0.08);
+
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -1026,16 +1054,18 @@ section {
   text-align: center;
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
-  background: rgb(31, 31, 31);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(71, 71, 71, 0.3039443155452436) 0%, rgba(119, 119, 119, 0.2993039443155452) 100%);
+  border: 2px solid rgba(54, 54, 54, 0.288);
   /*box-shadow: 0px 5px 90px 0px rgba(31, 31, 31, 0.055);*/
 }
 
 .qualities.light .icon-box {
-  background: #fafafa;
+  background: #e4e4e4;
 }
 
 .qualities.light .icon-box .icon svg path {
-  fill: #e4e4e4
+  fill: #fafafa
 }
 
 .qualities .icon-box .icon {
@@ -1091,41 +1121,47 @@ section {
 
 .qualities .iconbox-blue i {
   color: #47aeff;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .qualities .iconbox-blue:hover .icon i {
   color: #fff;
+  transition: 0.3s;
 }
 
 .qualities .iconbox-blue:hover .icon path {
   fill: #47aeff;
+  transition: 0.3s;
 }
 
 .qualities .iconbox-orange i {
   color: #ffa76e;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .qualities .iconbox-orange:hover .icon i {
   color: #fff;
+  transition: 0.3s;
 }
 
 .qualities .iconbox-orange:hover .icon path {
   fill: #ffa76e;
+  transition: 0.3s;
 }
 
 .qualities .iconbox-pink i {
   color: #e80368;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .qualities .iconbox-pink:hover .icon i {
   color: #fff;
+  transition: 0.3s;
 }
 
 .qualities .iconbox-pink:hover .icon path {
   fill: #e80368;
+  transition: 0.3s;
 }
 
 .qualities .iconbox-yellow i {
@@ -1397,11 +1433,17 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #222222;
+  transition: all 0.2s;
   color: #b4b4b4;
   font-size: 14px;
   text-align: center;
   padding: 30px 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(31, 31, 31, 0.304) 0%, rgba(145, 145, 145, 0.299) 100%);
+}
+
+#footer.light {
+  background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgb(13, 18, 22) 0%, rgb(78, 87, 95) 100%);
 }
 
 #footer h3 {

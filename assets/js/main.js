@@ -29,6 +29,7 @@
     document.getElementById("portfolio").classList.toggle('light');
     document.getElementById("qualities").classList.toggle('light');
     document.getElementById("hero").classList.toggle('light');
+    document.getElementById("footer").classList.toggle('light');
   });
 
   /**
@@ -106,6 +107,7 @@
         backtotop.classList.remove('active')
         select('.toggle').classList.remove('active')
         select('.toggle').classList.add('inactive')
+        
       }
     }
     window.addEventListener('load', toggleBacktotop)
@@ -170,8 +172,8 @@
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
+      typeSpeed: 70,
+      backSpeed: 40,
       backDelay: 2000
     });
   }
