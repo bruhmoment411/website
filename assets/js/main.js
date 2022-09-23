@@ -53,14 +53,18 @@
     el.addEventListener('scroll', listener)
   }
 
-  window.onscroll = function () { myFunction() };
+  if (document.getElementById("myBar") !== null) {
+    window.onscroll = function () { myFunction() };
 
-  function myFunction() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
   }
+
+  
 
   /**
    * Navbar links active state on scroll
@@ -101,13 +105,16 @@
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
         backtotop.classList.add('active')
-        select('.toggle').classList.remove('inactive')
-        select('.toggle').classList.add('active')
+        if (document.getElementById("myBar") !== null) {
+          select('.toggle').classList.remove('inactive')
+          select('.toggle').classList.add('active')
+        }
       } else {
         backtotop.classList.remove('active')
-        select('.toggle').classList.remove('active')
-        select('.toggle').classList.add('inactive')
-        
+        if (document.getElementById("myBar") !== null) {
+          select('.toggle').classList.remove('active')
+          select('.toggle').classList.add('inactive')
+        }
       }
     }
     window.addEventListener('load', toggleBacktotop)
