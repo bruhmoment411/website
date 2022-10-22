@@ -606,7 +606,6 @@ header {
   background-size: cover;
   position: relative;
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 0)));
-  transition: all 0.2s;
 }
 
 #hero.light {
