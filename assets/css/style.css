@@ -9,6 +9,148 @@
 Progress Bar
 */
 
+/*
+Shooting Stars
+*/
+
+@keyframes animateBg {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+stars {
+  transform: translateY(-20px);
+  translate: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.363);
+  border-radius: 50%;
+  animation: animate 3s linear infinite;
+}
+
+stars::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.288), transparent);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+
+  }
+
+  100% {
+    transform: rotate(315deg) translateX(-1500px);
+    opacity: 0;
+
+  }
+
+}
+
+stars:nth-child(1) {
+  top: 0;
+  right: 0;
+  left: initial;
+  animation-delay: 0;
+  animation-duration: 1s;
+}
+
+stars:nth-child(2) {
+  top: 0;
+  right: 80px;
+  left: initial;
+  animation-delay: 0.2s;
+  animation-duration: 3s;
+}
+
+stars:nth-child(3) {
+  top: 80px;
+  right: 0px;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 2s;
+}
+
+stars:nth-child(4) {
+  top: 0;
+  right: 180px;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 1.5s;
+}
+
+stars:nth-child(5) {
+  top: 0;
+  right: 400px;
+  left: initial;
+  animation-delay: 0.8s;
+  animation-duration: 2.5s;
+}
+
+stars:nth-child(6) {
+  top: 0;
+  right: 600px;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+
+stars:nth-child(7) {
+  top: 300px;
+  right: 0px;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 1.75s;
+}
+
+stars:nth-child(8) {
+  top: 0px;
+  right: 700px;
+  left: initial;
+  animation-delay: 1.4s;
+  animation-duration: 1.25s;
+}
+
+stars:nth-child(9) {
+  top: 0px;
+  right: 1000px;
+  left: initial;
+  animation-delay: 0.75s;
+  animation-duration: 2.25s;
+}
+
+stars:nth-child(10) {
+  top: 0px;
+  right: 1000px;
+  left: initial;
+  animation-delay: 2.75s;
+  animation-duration: 2.25s;
+}
+
+/*
+End shooting stars
+*/
+
 .responsive-container {
   width: 100%;
   position: relative;
@@ -46,6 +188,8 @@ body {
   color: #ffffff;
   background: rgb(8, 18, 24);
   transition: all 0.2s;
+  justify-content: center;
+  align-items: center;
 }
 
 body.light {
@@ -198,9 +342,10 @@ header {
   }
 
   main.light {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -457,9 +602,34 @@ header {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.webp") top right no-repeat;
+  background: url("../img/hero-bg2.webp") center center no-repeat;
   background-size: cover;
   position: relative;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 0)));
+  transition: all 0.2s;
+}
+
+#hero.light {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.webp") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 0)));
+}
+
+#blur {
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-size: cover;
+  position: absolute;
+  opacity: 1;
+  scale: 2;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 @media (min-width: 992px) {
@@ -470,7 +640,8 @@ header {
 
 #hero:before {
   content: "";
-  background: rgba(2, 2, 2, 0.8);
+  background: rgba(2, 2, 2);
+  opacity: 0.8;
   /*important*/
   position: absolute;
   bottom: 0;
@@ -492,6 +663,7 @@ header {
   color: #e7e7e7;
   /*important*/
   transition: all 0.2s;
+  transform: translateY(-60px);
 }
 
 #hero.light h1 {
@@ -504,6 +676,7 @@ header {
   font-size: 26px;
   font-family: "Poppins", sans-serif;
   transition: all 0.2s;
+  transform: translateY(-60px);
 }
 
 #hero.light p {
@@ -522,6 +695,7 @@ header {
 
 #hero .social-links {
   margin-top: 30px;
+  transform: translateY(-60px);
 }
 
 #hero .social-links a {
@@ -829,6 +1003,7 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
@@ -880,6 +1055,7 @@ section {
   overflow: hidden;
   z-index: 1;
   background: rgba(69, 80, 91, 0.8);
+  border-radius: 20px;
 }
 
 .portfolio .portfolio-wrap::before {
@@ -893,6 +1069,7 @@ section {
   transition: all ease-in-out 0.3s;
   z-index: 2;
   opacity: 0;
+  border-radius: 20px;
 }
 
 .portfolio .portfolio-wrap .portfolio-info {

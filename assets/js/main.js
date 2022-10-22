@@ -61,8 +61,22 @@
       var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       var scrolled = (winScroll / height) * 100;
       document.getElementById("myBar").style.width = scrolled + "%";
+
     }
   }
+
+  var windowHeight = window.innerHeight;
+  var windowWidth = window.innerWidth;
+  var scrollArea = 1000 - windowHeight;
+  var hero2 = document.getElementById('hero');
+  var heroBlur = document.getElementById('blur');
+
+  window.addEventListener('scroll', function () {
+    var scrollTop = window.pageYOffset || window.scrollTop;
+    var scrollPercent = scrollTop / scrollArea || 0;
+    hero2.style.top = (scrollPercent * window.innerHeight)/30 + 'px';
+    heroBlur.style.opacity = Math.min(1, scrollPercent/12);
+  });
 
   
 
