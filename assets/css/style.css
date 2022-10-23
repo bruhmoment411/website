@@ -298,6 +298,69 @@ h6 {
   }
 }
 
+#opening {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  overflow: hidden;
+  background: rgb(24, 24, 24);
+}
+
+@-webkit-keyframes animate-opening {
+  0% {
+    top: 50vh;
+  }
+
+  100% {
+    top: 100vh;
+  }
+}
+
+@keyframes animate-opening {
+  0% {
+    top: 50vh;
+  }
+
+  100% {
+    top: 100vh;
+  }
+}
+
+#openingtwo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  overflow: hidden;
+  background: rgb(24, 24, 24);
+
+}
+
+@-webkit-keyframes animate-openingtwo {
+  0% {
+    top: 50vh;
+  }
+
+  100% {
+    top: 0vh;
+  }
+}
+
+@keyframes animate-openingtwo {
+  0% {
+    bottom: 50vh;
+  }
+
+  100% {
+    bottom: 100vh;
+  }
+}
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -353,6 +416,39 @@ header {
 /**
 * Desktop Navigation 
 */
+
+#slider {
+  position: fixed;
+  left: calc(-20vw - 20vh);
+  top: 0vh;
+  height: 100vh;
+  width: 20vw;
+  z-index: 999;
+  overflow: hidden;
+  background: #0563bb;
+  transform: skew(-20deg);
+}
+
+@-webkit-keyframes sliding {
+  0% {
+    left: calc(-20vw - 20vh);
+  }
+
+  100% {
+    left: calc(100vw + 18vh);
+  }
+}
+
+@keyframes sliding {
+  0% {
+    left: calc(-20vw - 20vh);
+  }
+
+  100% {
+    left: calc(100vw + 18vh);
+  }
+}
+
 .nav-menu {
   padding: 0;
   display: block;
@@ -640,7 +736,7 @@ header {
 #hero:before {
   content: "";
   background: rgba(2, 2, 2);
-  opacity: 0.8;
+  opacity: 0.7;
   /*important*/
   position: absolute;
   bottom: 0;
