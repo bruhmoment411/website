@@ -153,10 +153,9 @@
    * Scrool with ofset on links with a class name .scrollto
    */
 
-  let slider = document.getElementById('slider');
 
   on('click', '.scrollto', function (e) {
-    
+
     if (select(this.hash)) {
       e.preventDefault()
       let body = select('body')
@@ -184,17 +183,24 @@
   /**
    * Preloader
    */
+  let slider = document.getElementById('slider');
   let preloader = select('#preloader');
   let opening = document.getElementById('opening');
   let openingtwo = document.getElementById('openingtwo');
+  let loader = document.getElementById('load');
   if (preloader) {
     window.addEventListener('load', () => {
       preloader.remove()
       opening.style.animation = "animate-opening 0.5s cubic-bezier(.73,-0.03,.27,1.06)"
+      opening.style.animationDelay = "0.6s";
       opening.style.animationFillMode = "forwards"
       openingtwo.style.animation = "animate-openingtwo 0.5s cubic-bezier(.73,-0.03,.27,1.06)"
+      openingtwo.style.animationDelay = "0.6s";
       openingtwo.style.animationFillMode = "forwards"
       slider.style.animation = "sliding 0.5s cubic-bezier(.73,-0.03,.27,1.06)"
+      slider.style.animationDelay = "0.6s";
+      loader.style.animation = "loading 0.4s cubic-bezier(.21,.71,.31,.97)"
+      loader.style.animationDelay = "0.2s";
     });
   }
 

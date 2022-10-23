@@ -304,7 +304,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 999;
+  z-index: 9999;
   overflow: hidden;
   background: rgb(24, 24, 24);
 }
@@ -335,7 +335,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 999;
+  z-index: 9999;
   overflow: hidden;
   background: rgb(24, 24, 24);
 
@@ -423,7 +423,7 @@ header {
   top: 0vh;
   height: 100vh;
   width: 20vw;
-  z-index: 999;
+  z-index: 10000;
   overflow: hidden;
   background: #0563bb;
   transform: skew(-20deg);
@@ -446,6 +446,37 @@ header {
 
   100% {
     left: calc(100vw + 18vh);
+  }
+}
+
+#load {
+  position: fixed;
+  left: -100vw;
+  top: 49.4vh;
+  height: 3px;
+  width: 100vw;
+  z-index: 10001;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    left: -100vh;
+  }
+
+  100% {
+    left: 0vh;
+  }
+}
+
+@keyframes loading {
+  0% {
+    left: -100vw;
+  }
+
+  100% {
+    left: 0vw;
   }
 }
 
@@ -561,7 +592,7 @@ header {
   position: fixed;
   right: 10px;
   top: 10px;
-  z-index: 9998;
+  z-index: 100;
   border: 0;
   background: none;
   font-size: 28px;
