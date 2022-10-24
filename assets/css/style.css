@@ -225,7 +225,7 @@ h6 {
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 996;
+  z-index: 99;
   background: #0563bb;
   width: 40px;
   height: 40px;
@@ -565,6 +565,170 @@ header {
 .nav-menu li:hover>a {
   color: #fff;
   background: #0563bb;
+}
+
+#hovereffect {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@-webkit-keyframes hovereffect {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hovereffect {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hovereffect2 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hovereffect2 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#nav-textH{
+  position: relative;
+  z-index: 100;
+  opacity: 0;
+}
+
+#nav-textH a::before {
+  content: "home";
+  top: 45vh;
+  left: 50vw;
+  font-size: 7vw;
+  font-weight: 300;
+  line-height: 56px;
+  color: #e7e7e7;
+  background-size: cover;
+  position: fixed;
+}
+
+#nav-textA{
+  position: relative;
+  z-index: 100;
+  opacity: 0;
+}
+
+#nav-textA a::before {
+  content: "about";
+  top: 45vh;
+  left: 50vw;
+  font-size: 7vw;
+  font-weight: 300;
+  line-height: 56px;
+  color: #e7e7e7;
+  background-size: cover;
+  position: fixed;
+}
+
+#nav-textR{
+  position: relative;
+  z-index: 100;
+  opacity: 0;
+}
+
+#nav-textR a::before {
+  content: "resume";
+  top: 45vh;
+  left: 50vw;
+  font-size: 7vw;
+  font-weight: 300;
+  line-height: 56px;
+  color: #e7e7e7;
+  background-size: cover;
+  position: fixed;
+}
+
+#nav-textP{
+  position: relative;
+  z-index: 100;
+  opacity: 0;
+}
+
+#nav-textP a::before {
+  content: "portfolio";
+  top: 45vh;
+  left: 50vw;
+  font-size: 7vw;
+  font-weight: 300;
+  line-height: 56px;
+  color: #e7e7e7;
+  background-size: cover;
+  position: fixed;
+}
+
+#nav-textQ{
+  position: relative;
+  z-index: 100;
+  opacity: 0;
+}
+
+#nav-textQ a::before {
+  content: "qualities";
+  top: 45vh;
+  left: 50vw;
+  font-size: 7vw;
+  font-weight: 300;
+  line-height: 56px;
+  color: #e7e7e7;
+  background-size: cover;
+  position: fixed;
+}
+
+#nav-textC{
+  position: relative;
+  z-index: 100;
+  opacity: 0;
+}
+
+#nav-textC a::before {
+  content: "contact";
+  top: 45vh;
+  left: 50vw;
+  font-size: 7vw;
+  font-weight: 300;
+  line-height: 56px;
+  color: #e7e7e7;
+  background-size: cover;
+  position: fixed;
 }
 
 .nav-menu a:hover span,

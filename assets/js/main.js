@@ -19,19 +19,6 @@
     }
   }
 
-  document.addEventListener('change', () => {
-    document.body.classList.toggle('light');
-    document.getElementById("header").classList.toggle('light');
-    document.getElementById("main").classList.toggle('light');
-    document.getElementById("navbar").classList.toggle('light');
-    document.getElementById("resume").classList.toggle('light');
-    document.getElementById("facts").classList.toggle('light');
-    document.getElementById("portfolio").classList.toggle('light');
-    document.getElementById("qualities").classList.toggle('light');
-    document.getElementById("hero").classList.toggle('light');
-    document.getElementById("footer").classList.toggle('light');
-  });
-
   /**
    * Easy event listener function
    */
@@ -103,6 +90,8 @@
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
+
+
   /**
    * Scrolls to an element with header offset
    */
@@ -142,17 +131,27 @@
    * Mobile nav toggle
    */
 
+  let hovereffect = document.getElementById('hovereffect')
+  let boolean = false;
   on('click', '.mobile-nav-toggle', function (e) {
     select('body').classList.toggle('mobile-nav-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
-
+    if (boolean == false) {
+      boolean = true
+      hovereffect.style.animation = "hovereffect 0.2s linear"
+      hovereffect.style.animationFillMode = 'forwards'
+    }
+    else {
+      boolean = false
+      hovereffect.style.animation = "hovereffect2 0.2s linear"
+      hovereffect.style.animationFillMode = 'forwards'
+    }
   })
 
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-
 
   on('click', '.scrollto', function (e) {
 
@@ -164,6 +163,9 @@
         let navbarToggle = select('.mobile-nav-toggle')
         navbarToggle.classList.toggle('bi-list')
         navbarToggle.classList.toggle('bi-x')
+        hovereffect.style.animation = "hovereffect2 0.2s linear"
+        hovereffect.style.animationFillMode = 'forwards'
+        boolean = false;
       }
       scrollto(this.hash)
     }

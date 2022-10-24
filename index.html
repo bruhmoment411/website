@@ -51,31 +51,128 @@
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex flex-column justify-content-center">
 
-    <nav id="navbar" class="navbar nav-menu">
+    <nav id="navbar" class="navbar nav-menu" onmouseleave="mouseOut()">
       <ul>
-        <li><a href="#top" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a>
+        <li><a href="#top" onmouseenter="mouseOver(); mouseOverH()" onmouseleave="mouseOutH()"
+            onclick="mouseOut(); mouseOutH()" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a>
         </li>
-        <li><a href="#qualities" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Qualities</span></a></li>
-        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <li><a href="#about" onmouseenter="mouseOver(); mouseOverA()" onmouseleave="mouseOutA()"
+            onclick="mouseOut(); mouseOutA()" class="nav-link scrollto"><i class="bx bx-user"></i>
+            <span>About</span></a></li>
+        <li><a href="#resume" onmouseenter="mouseOver(); mouseOverR()" onmouseleave="mouseOutR()"
+            onclick="mouseOut(); mouseOutR()" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
+            <span>Resume</span></a></li>
+        <li><a href="#portfolio" onmouseenter="mouseOver(); mouseOverP()" onmouseleave="mouseOutP()"
+            onclick="mouseOut(); mouseOutP()" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+            <span>Portfolio</span></a>
+        </li>
+        <li><a href="#qualities" onmouseenter="mouseOver(); mouseOverQ()" onmouseleave="mouseOutQ()"
+            onclick="mouseOut(); mouseOutQ()" class="nav-link scrollto"><i class="bx bx-server"></i>
+            <span>Qualities</span></a></li>
+        <li><a href="#contact" onmouseenter="mouseOver(); mouseOverC()" onmouseleave="mouseOutC()"
+            onclick="mouseOut(); mouseOutC()" class="nav-link scrollto"><i class="bx bx-envelope"></i>
+            <span>Contact</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
 
   </header><!-- End Header -->
+  <script>
+    function mouseOver() {
+      let hover = document.getElementById('hovereffect')
+      hover.style.animation = "hovereffect 0.2s linear"
+      hover.style.animationFillMode = 'forwards'
+    }
+    function mouseOut() {
+      let hover = document.getElementById('hovereffect')
+      hover.style.animation = "hovereffect2 0.2s linear"
+      hover.style.animationFillMode = 'forwards'
+    }
+
+
+    function mouseOverH() {
+      let hovertext = document.getElementById('nav-textH')
+      hovertext.style.animation = "hovereffect 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+    function mouseOutH() {
+      let hovertext = document.getElementById('nav-textH')
+      hovertext.style.animation = "hovereffect2 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+
+
+    function mouseOverA() {
+      let hovertext = document.getElementById('nav-textA')
+      hovertext.style.animation = "hovereffect 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+    function mouseOutA() {
+      let hovertext = document.getElementById('nav-textA')
+      hovertext.style.animation = "hovereffect2 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+
+
+    function mouseOverR() {
+      let hovertext = document.getElementById('nav-textR')
+      hovertext.style.animation = "hovereffect 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+    function mouseOutR() {
+      let hovertext = document.getElementById('nav-textR')
+      hovertext.style.animation = "hovereffect2 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+
+
+    function mouseOverP() {
+      let hovertext = document.getElementById('nav-textP')
+      hovertext.style.animation = "hovereffect 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+    function mouseOutP() {
+      let hovertext = document.getElementById('nav-textP')
+      hovertext.style.animation = "hovereffect2 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+
+
+    function mouseOverQ() {
+      let hovertext = document.getElementById('nav-textQ')
+      hovertext.style.animation = "hovereffect 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+    function mouseOutQ() {
+      let hovertext = document.getElementById('nav-textQ')
+      hovertext.style.animation = "hovereffect2 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+
+
+    function mouseOverC() {
+      let hovertext = document.getElementById('nav-textC')
+      hovertext.style.animation = "hovereffect 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+    function mouseOutC() {
+      let hovertext = document.getElementById('nav-textC')
+      hovertext.style.animation = "hovereffect2 0.2s linear"
+      hovertext.style.animationFillMode = 'forwards'
+    }
+  </script>
+
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div id="blur"></div>
-        <section>
-        <stars></stars>
-        <stars></stars>
-        <stars></stars>
-        <stars></stars>
-        <stars></stars>
-        <stars></stars>
-        <stars></stars>
+    <section>
+      <stars></stars>
+      <stars></stars>
+      <stars></stars>
+      <stars></stars>
+      <stars></stars>
+      <stars></stars>
+      <stars></stars>
     </section>
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Ayden Nguyen</h1>
@@ -693,6 +790,25 @@
   <div id="openingtwo"></div>
   <div id="slider"></div>
   <div id="load"></div>
+  <div id="hovereffect"></div>
+  <div id="nav-textH">
+    <a></a>
+  </div>
+  <div id="nav-textA">
+    <a></a>
+  </div>
+  <div id="nav-textR">
+    <a></a>
+  </div>
+  <div id="nav-textP">
+    <a></a>
+  </div>
+  <div id="nav-textQ">
+    <a></a>
+  </div>
+  <div id="nav-textC">
+    <a></a>
+  </div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
@@ -711,11 +827,26 @@
   <script src="assets/js/main.js"></script>
 
   <input type="checkbox" class="checkbox" id="check" />
-  <div class="toggle">
+
+  <div class="toggle" onclick="lightMode()">
     <label class="label" for="check">
       <div class="ball"></div>
     </label>
   </div>
+  <script>
+    function lightMode() {
+      document.body.classList.toggle('light');
+      document.getElementById("header").classList.toggle('light');
+      document.getElementById("main").classList.toggle('light');
+      document.getElementById("navbar").classList.toggle('light');
+      document.getElementById("resume").classList.toggle('light');
+      document.getElementById("facts").classList.toggle('light');
+      document.getElementById("portfolio").classList.toggle('light');
+      document.getElementById("qualities").classList.toggle('light');
+      document.getElementById("hero").classList.toggle('light');
+      document.getElementById("footer").classList.toggle('light');
+    }
+  </script>
 
 </body>
 
