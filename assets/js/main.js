@@ -347,12 +347,12 @@
 
   window.onresize = updateDim;
 
-  document.getElementById('canvas').style.opacity = window.innerWidth / 5000;
+  document.getElementById('canvas').style.opacity = window.innerWidth / 2500;
 
   function updateDim() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    document.getElementById('canvas').style.opacity = window.innerWidth / 5000;
+    document.getElementById('canvas').style.opacity = window.innerWidth / 2500;
   }
 
   var stars = [], // Array that contains the stars
