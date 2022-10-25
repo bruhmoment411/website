@@ -225,7 +225,7 @@ h6 {
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 99;
+  z-index: 98;
   background: #0563bb;
   width: 40px;
   height: 40px;
@@ -627,6 +627,7 @@ header {
   position: relative;
   z-index: 100;
   opacity: 0;
+  mix-blend-mode: luminosity;
 }
 
 #nav-textH a::before {
@@ -636,7 +637,6 @@ header {
   font-size: 7vw;
   font-weight: 300;
   line-height: 56px;
-  color: #e7e7e7;
   background-size: cover;
   position: fixed;
 }
@@ -645,6 +645,7 @@ header {
   position: relative;
   z-index: 100;
   opacity: 0;
+  mix-blend-mode: luminosity;
 }
 
 #nav-textA a::before {
@@ -654,7 +655,6 @@ header {
   font-size: 7vw;
   font-weight: 300;
   line-height: 56px;
-  color: #e7e7e7;
   background-size: cover;
   position: fixed;
 }
@@ -663,6 +663,7 @@ header {
   position: relative;
   z-index: 100;
   opacity: 0;
+  mix-blend-mode: luminosity;
 }
 
 #nav-textR a::before {
@@ -672,7 +673,6 @@ header {
   font-size: 7vw;
   font-weight: 300;
   line-height: 56px;
-  color: #e7e7e7;
   background-size: cover;
   position: fixed;
 }
@@ -681,6 +681,7 @@ header {
   position: relative;
   z-index: 100;
   opacity: 0;
+  mix-blend-mode: luminosity;
 }
 
 #nav-textP a::before {
@@ -690,7 +691,6 @@ header {
   font-size: 7vw;
   font-weight: 300;
   line-height: 56px;
-  color: #e7e7e7;
   background-size: cover;
   position: fixed;
 }
@@ -699,6 +699,7 @@ header {
   position: relative;
   z-index: 100;
   opacity: 0;
+  mix-blend-mode: luminosity;
 }
 
 #nav-textQ a::before {
@@ -708,7 +709,6 @@ header {
   font-size: 7vw;
   font-weight: 300;
   line-height: 56px;
-  color: #e7e7e7;
   background-size: cover;
   position: fixed;
 }
@@ -717,6 +717,7 @@ header {
   position: relative;
   z-index: 100;
   opacity: 0;
+  mix-blend-mode: luminosity;
 }
 
 #nav-textC a::before {
@@ -726,7 +727,6 @@ header {
   font-size: 7vw;
   font-weight: 300;
   line-height: 56px;
-  color: #e7e7e7;
   background-size: cover;
   position: fixed;
 }
