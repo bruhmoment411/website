@@ -8,6 +8,10 @@
 /*
 Progress Bar
 */
+canvas {
+  position: fixed;
+  pointer-events: none;
+}
 
 /*
 Shooting Stars
@@ -623,7 +627,7 @@ header {
   }
 }
 
-#nav-textH{
+#nav-textH {
   position: relative;
   z-index: 100;
   opacity: 0;
@@ -641,7 +645,7 @@ header {
   position: fixed;
 }
 
-#nav-textA{
+#nav-textA {
   position: relative;
   z-index: 100;
   opacity: 0;
@@ -659,7 +663,7 @@ header {
   position: fixed;
 }
 
-#nav-textR{
+#nav-textR {
   position: relative;
   z-index: 100;
   opacity: 0;
@@ -677,7 +681,7 @@ header {
   position: fixed;
 }
 
-#nav-textP{
+#nav-textP {
   position: relative;
   z-index: 100;
   opacity: 0;
@@ -695,7 +699,7 @@ header {
   position: fixed;
 }
 
-#nav-textQ{
+#nav-textQ {
   position: relative;
   z-index: 100;
   opacity: 0;
@@ -713,7 +717,7 @@ header {
   position: fixed;
 }
 
-#nav-textC{
+#nav-textC {
   position: relative;
   z-index: 100;
   opacity: 0;
