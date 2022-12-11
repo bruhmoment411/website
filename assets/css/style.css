@@ -11,6 +11,7 @@ Progress Bar
 canvas {
   position: fixed;
   pointer-events: none;
+  opacity: 0;
 }
 
 /*
@@ -30,14 +31,11 @@ Shooting Stars
 }
 
 stars {
-  transform: translateY(-20px);
-  translate: 5px;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 4px;
   height: 6px;
-  background: rgba(255, 255, 255, 0.363);
   border-radius: 50%;
   animation: animate 3s linear infinite;
 }
@@ -896,25 +894,11 @@ header {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
-  background: url("../img/hero-bg.webp") center center no-repeat;
+  height: 110vh;
+  background: url("../img/hero.webp") center center no-repeat;
   background-size: cover;
   position: relative;
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 0)));
-}
-
-#blur {
-  width: 100%;
-  height: 100vh;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background-size: cover;
-  position: absolute;
-  opacity: 1;
-  scale: 2;
-  opacity: 0;
-  z-index: 1;
-  pointer-events: none;
 }
 
 @media (min-width: 992px) {
@@ -948,7 +932,7 @@ header {
   color: #e7e7e7;
   /*important*/
   transition: all 0.2s;
-  transform: translateY(-60px);
+  transform: translateY(-105px);
 }
 
 #hero.light h1 {
@@ -961,7 +945,7 @@ header {
   font-size: 26px;
   font-family: "Poppins", sans-serif;
   transition: all 0.2s;
-  transform: translateY(-60px);
+  transform: translateY(-105px);
 }
 
 #hero.light p {
@@ -980,7 +964,7 @@ header {
 
 #hero .social-links {
   margin-top: 30px;
-  transform: translateY(-60px);
+  transform: translateY(-105px);
 }
 
 #hero .social-links a {

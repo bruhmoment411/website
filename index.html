@@ -165,7 +165,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div id="blur"></div>
-    <section>
+    <section id="stars">
       <stars></stars>
       <stars></stars>
       <stars></stars>
@@ -829,12 +829,13 @@
   <script src="assets/js/main.js"></script>
 
   <input type="checkbox" class="checkbox" id="check" />
-
-  <div class="toggle" onclick="lightMode()">
+  
+  <div class="toggle" onclick="lightMode()" style="opacity: 0; pointer-events: none;">
     <label class="label" for="check">
       <div class="ball"></div>
     </label>
   </div>
+
   <script>
     function lightMode() {
       document.body.classList.toggle('light');

@@ -7,6 +7,7 @@
 
 
 (function () {
+
   "use strict";
 
   /**
@@ -63,11 +64,11 @@
     var scrollTop = window.pageYOffset || window.scrollTop;
     var scrollPercent = scrollTop / scrollArea || 0;
     if (hero2 != null && heroBlur != null) {
-      hero2.style.top = (scrollPercent * windowHeight) / 30 + 'px';
-      heroBlur.style.opacity = Math.min(1, scrollPercent / 12);
+      hero2.style.bottom = (scrollPercent * windowHeight) / -25 + 'px';
+      let blurString = 'blur(' + scrollPercent + 'px)';
+      hero2.style.filter = blurString;
     }
   });
-
 
 
   /**
@@ -90,8 +91,6 @@
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
-
-
 
   /**
    * Scrolls to an element with header offset
