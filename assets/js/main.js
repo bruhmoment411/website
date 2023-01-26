@@ -64,7 +64,7 @@
     var scrollTop = window.pageYOffset || window.scrollTop;
     var scrollPercent = scrollTop / scrollArea || 0;
     if (hero2 != null && heroBlur != null) {
-      hero2.style.bottom = (scrollPercent * windowHeight) / -25 + 'px';
+      //hero2.style.bottom = (scrollPercent * windowHeight) / -25 + 'px';
       let blurString = 'blur(' + scrollPercent + 'px)';
       hero2.style.filter = blurString;
     }
